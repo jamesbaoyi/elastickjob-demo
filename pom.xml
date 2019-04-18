@@ -53,7 +53,7 @@
             <version>${elastic-job.version}</version>
         </dependency>
 
-        
+
 
     </dependencies>
 
