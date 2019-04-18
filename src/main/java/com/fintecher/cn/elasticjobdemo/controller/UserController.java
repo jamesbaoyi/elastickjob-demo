@@ -21,11 +21,16 @@ public class UserController {
 
     @GetMapping("/saveUser")
     private void saveUser() {
-        User user = new User();
-        user.setCity("甘肃");
-        user.setName("张军");
-        user.setId(1L);
-        userRepository.save(user);
+        for (int i = 0; i < 40; i++) {
+            User user = new User();
+            user.setCity("甘肃");
+            if (i % 2 == 0) {
+                user.setName("张军");
+            } else
+                user.setName("李四");
+            user.setId(new Long(i));
+            userRepository.save(user);
+        }
     }
 
     @GetMapping("/getAllUsers")
